@@ -6,7 +6,7 @@ from number_guesser_user import User
 
 def game(game_mode):
         while True:
-            game_user = User(0,0)
+            game_user = User(0,0,0)
             start_time = datetime.utcnow()
             if game_mode == 1:
                 limite = 51
@@ -68,7 +68,29 @@ def game(game_mode):
                         if total_points <= int(i):
                             print("tu puntaje maximo es de", str(i), ",intenta superarlo la proxima vez")
                             time.sleep(2)
-                            break        
+                            break
+                with open("./user_points.txt", "r", encoding="UTF=8") as up:
+                    for i in up:
+                        new_user_points_saved = int(i) + total_points
+                        with open("./user_points.txt", "w", encoding="UTF-8") as np:
+                            np.write(str(new_user_points_saved))     
+                            with open("./level.txt", "r", encoding="UTF-8") as rulful:
+                                for i in rulful:
+                                    limit_level = 1000000 * ((int(i)+1)*(int(i)+1))
+                                    if new_user_points_saved >= limit_level:
+                                        with open("./level.txt", "w", encoding="UTF-8") as nulig:
+                                            nulig.write(str(int(i)+1))
+                                            print("Increible!, has subido a nivel", str(int(i)+1),",eres todo un adivinador!")
+                                            time.sleep(3.5)
+                                            with open("./level.txt", "r", encoding="UTF-8") as frfi:
+                                                for _ in frfi:
+                                                    game_user.new_level(int(_))
+                                    else:
+                                        time.sleep(1)
+                                        print("necesitas", str(limit_level -new_user_points_saved), "puntos más para subir a nivel", str(int(i)+1))
+                                        time.sleep(3)
+                                        break       
+                            break                 
                 print("tu partida a durado", str(total_time), "segundos")
                 with open("./best-time.txt", "r", encoding="UTF-8") as bt:
                     for i in  bt:
