@@ -1,5 +1,5 @@
 # Number Guesser V1.0
-- Bienvenido a este humilde repositorio, aquí encontraras un pequeño programa hecho en Python que consiste en un juego de adivinar el numero aleatoriamente generado por el mismo programa a través de una serie de intentos y pistas, para la correcta ejecución y entendimiento del programa recomiendo leer este README en su totalidad, además también recomiendo dejar los archivos .txt tal como están pues su modificación podría alterar el correcto funcionamiento del programa
+- Bienvenido a este humilde repositorio, aquí encontraras un pequeño programa hecho en Python que consiste en un juego de adivinar el numero aleatoriamente generado por el mismo programa a través de una serie de intentos y pistas, para la correcta ejecución y entendimiento del programa recomiendo leer este README en su totalidad, además también recomiendo dejar los archivos .txt tal como están pues su modificación podría alterar el correcto funcionamiento del programa, el programa que debe ejecutarse para probar el juego es el archivo number_guesser.py
 
 ---
 ## Menú
@@ -18,4 +18,4 @@
 ## Otros archivos del programa
 - El repositorio posee un archivo llamado **requirements.txt** sin embargo no es necesario descargar ningún paquete, el programa funciona perfectamente sin tener que usar pip install, además hay un archivo **.gitignore** pero solo lo utilice para ignorar la carpeta que genera el entorno virtual
 ---
-**siéntete libre de chequear el código, modificarlo a tu gusto e incluso mejorarlo si es que deseas hacerlo, muchas gracias por pasar por este repositorio** 
+**siéntete libre de chequear el código, modificarlo a tu gusto e incluso mejorarlo si es que deseas hacerlo, muchas gracias por pasar por este repositorio.** 
