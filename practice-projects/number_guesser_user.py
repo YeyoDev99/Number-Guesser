@@ -7,9 +7,9 @@ class User():
         with open("./best-time.txt", "r", encoding="UTF-8") as best_time_sheet:
             for _ in best_time_sheet:
                 best_time_user = int(_)
-                if best_time_user > 1000000000000000000000000000000000000000000000000000000000:
+                if best_time_user > 10000000000000000000000000000000000000000000000000000000000:
                     self.best_time = "Aun no has jugado alguna partida, comienza a jugar para obtener un mejor tiempo"
-                if best_time_user < 1000000000000000000000000000000000000000000000000000000000:    
+                if best_time_user < 10000000000000000000000000000000000000000000000000000000000:    
                     self.best_time = best_time_user 
         with open("./level.txt", "r", encoding="UTF-8") as level_sheet:
             for _ in level_sheet:
